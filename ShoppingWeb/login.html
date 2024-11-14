@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="form-container">
+            <h2>Đăng nhập</h2>
+            <form id="loginFormContent" onsubmit="handleLogin(event)">
+                <label for="username">Tên người dùng:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const inputUsername = document.getElementById("username").value;
+            const inputPassword = document.getElementById("password").value;
+
+            // Lấy thông tin đã đăng ký từ localStorage
+            const storedUsername = localStorage.getItem("username");
+            const storedPassword = localStorage.getItem("password");
+
+            // Kiểm tra thông tin đăng nhập
+            if (inputUsername === storedUsername && inputPassword === storedPassword) {
+                localStorage.setItem("isLoggedIn", true); // Đánh dấu đã đăng nhập
+                alert("Đăng nhập thành công! Chào mừng, " + inputUsername + "!");
+                window.location.href = "HomePage.html";
+            } else {
+                alert("Tên người dùng hoặc mật khẩu không đúng.");
+            }
+        }
+    </script>
+</body>
+</html>

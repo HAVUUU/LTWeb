@@ -1,0 +1,543 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* General Header Styling */
+.header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Styling for Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-button,
+.register-button {
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button {
+  background-color: #555;
+  color: white;
+}
+
+.register-button {
+  background-color: #f78b2d;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #666;
+}
+
+.register-button:hover {
+  background-color: #e67a1e;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .auth-buttons {
+    margin-top: 10px;
+  }
+}
+
+/* Banner Section */
+.banner {
+  background-image: url("images/sofa.jpg");
+  background-size: cover; /* Cho ảnh bao phủ toàn bộ không gian */
+  background-position: center; /* Căn giữa ảnh */
+  color: white;
+  text-align: center;
+  padding: 100px 40px;
+  position: relative;
+  width: 100%;
+  height: 900px;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Tạo lớp phủ mờ để làm nổi bật nội dung */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+/* Product Categories Button */
+.category-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #555; /* Đổi màu khi hover */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.why-choose-us h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.feature {
+  width: 30%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.feature a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  justify-content: space-around; /* Căn đều các phần */
+  padding: 40px;
+  background-color: #f8f8f8;
+  color: #333;
+  flex-wrap: nowrap; /* Không cho các phần tử xuống hàng */
+}
+
+.footer-section {
+  flex: 1; /* Chia đều không gian cho mỗi phần */
+  margin: 10px;
+  min-width: 200px; /* Đảm bảo chiều rộng tối thiểu cho từng phần */
+  max-width: 250px; /* Đặt chiều rộng tối đa để tránh dàn quá rộng */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.payment-icons img,
+.logistics-icons img {
+  width: 50px; /* Giảm kích thước ảnh để vừa với chiều rộng */
+  height: auto;
+}
+
+.footer h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.payment-icons,
+.logistics-icons,
+.download-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Login Page Styling */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.form-container button:hover {
+  background-color: #555;
+}
+
+.form-container p {
+  margin-top: 15px;
+}
+
+.form-container a {
+  color: #f78b2d;
+  text-decoration: none;
+}
+
+/* Register Page Styling */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.form-container button:hover {
+  background-color: #555;
+}
+
+.form-container p {
+  margin-top: 15px;
+}
+
+.form-container a {
+  color: #f78b2d;
+  text-decoration: none;
+}
+
+/* Logout Button Styling */
+.logout-button {
+  font-size: 1em;
+  color: #fff;
+  background-color: #f78b2d;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #333;
+  color: #f78b2d;
+}
+
+/* Styles for Category Section */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  background-color: #f78b2d; /* Màu nền cam cho nút */
+  color: #fff; /* Màu chữ trắng */
+  border: none; /* Bỏ viền nút */
+  border-radius: 8px; /* Bo tròn góc */
+  cursor: pointer; /* Con trỏ chỉ tay khi hover */
+  font-size: 1em; /* Cỡ chữ */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-btn:hover {
+  background-color: #333; /* Đổi nền khi hover */
+  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+.category-btn:active {
+  transform: scale(0.95); /* Giảm kích thước nhẹ khi click */
+}
+
+/* Styles for Product Display */
+.products {
+  display: flex;
+  flex-wrap: wrap; /* Đảm bảo sản phẩm xuống dòng khi màn hình hẹp */
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  width: 200px;
+  background-color: #fff; /* Màu nền trắng */
+  border: 1px solid #ddd; /* Viền nhạt xung quanh sản phẩm */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho sản phẩm */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Nổi lên khi hover */
+}
+
+.product-card img {
+  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng */
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.1em;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.product-card p {
+  font-size: 1em;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* General Page Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+/* Styles for Category Cards */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.category-card {
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px); /* Hiệu ứng nổi khi hover */
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #f78b2d; /* Đường viền dưới cho ảnh */
+}
+
+.category-card h3 {
+  padding: 10px;
+  font-size: 1.2em;
+  color: #f78b2d; /* Màu chữ nổi bật */
+}

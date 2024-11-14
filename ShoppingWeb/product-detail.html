@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="product-detail-style.css" />
+    <link rel="stylesheet" href="logo.css" />
+    <script
+      src="https://kit.fontawesome.com/dab34c92da.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-background">
+          <div class="logo" onclick="location.href='HomePage.html'">
+            <img src="images/logonoithat.png" alt="SVMA Logo" />
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons" id="auth-buttons"></div>
+      </div>
+    </header>
+
+    <!-------------------------------------Product-------------------------------------------->
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-top row">
+          <p id="home">Home</p>
+          <span>&#10230;</span>
+          <p id="products">Product</p>
+        </div>
+        <div class="product-content row">
+          <div class="product-content-left row">
+            <div class="product-content-left-big-img">
+              <img src="images/sofa.jpg" alt="" />
+            </div>
+            <div class="product-content-left-small-img">
+              <img src="images/sofa.jpg" alt="" />
+              <img src="images/sp0.0.1.jpg" alt="" />
+              <img src="images/sp0.1.1.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="product-content-right">
+            <div class="product-content-right-product-name">
+              <h1>GHẾ SOFA ĐƠN TRẮNG</h1>
+            </div>
+            <div class="product-content-right-product-price">
+              <p>5.990.000<sup>đ</sup></p>
+            </div>
+            <div class="product-content-right-product-color">
+              <p><span>Màu sắc:</span></p>
+              <div class="product-color-image">
+                <img src="images/spcolor.jpg" alt="" />
+                <img src="images/brown-img.jpg" alt="" />
+              </div>
+            </div>
+            <!-- <div class="product-content-right-product-size">
+              <p style="font-weight: bold">Size</p>
+              <span>S</span>
+              <span>M</span>
+              <span>L</span>
+            </div> -->
+            <div class="quantity">
+              <p style="font-weight: bold">Số lượng</p>
+              <input type="number" min="0" value="1" />
+            </div>
+            <div class="product-content-right-product-button row">
+              <button>MUA HÀNG</button>
+              <button>
+                <i class="fa-solid fa-cart-shopping"></i>THÊM VÀO GIỎ HÀNG
+              </button>
+            </div>
+            <div class="product-content-right-product-icon row">
+              <div class="product-content-right-product-icon-item">
+                <i class="fa-solid fa-phone"></i>
+                <p>Hotline</p>
+              </div>
+              <div class="product-content-right-product-icon-item">
+                <i class="fa-solid fa-comment"></i>
+                <p>Chat</p>
+              </div>
+              <div class="product-content-right-product-icon-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Mail</p>
+              </div>
+            </div>
+
+            <div class="product-content-right-buttom">
+              <div class="product-content-right-buttom-top">&#8744;</div>
+            </div>
+            <div class="product-content-right-buttom-main-content">
+              <div class="product-content-right-buttom-main-content-title row">
+                <div
+                  class="product-content-right-buttom-main-content-title-item mota"
+                >
+                  <p>Mô tả</p>
+                </div>
+                <div
+                  class="product-content-right-buttom-main-content-title-item chitiet"
+                >
+                  <p>Chi tiết</p>
+                </div>
+              </div>
+              <div class="product-content-right-buttom-content">
+                <div class="product-content-right-buttom-content-mota">
+                  <p>
+                    Ghế sofa giường da giả cho văn phòng <br />
+                    - Chất liệu: khung gỗ bạch đàn, nệm mút foam nguyên tấm (nệm
+                    mềm ngồi êm, chống xẹp lún), da công nghiệp (ngoài ra còn có
+                    vải nhung nỉ / vải bố cotton), chân gỗ cao su.
+                  </p>
+                </div>
+                <div class="product-content-right-buttom-content-chitiet">
+                  <p>
+                    Kích thước: 1m9 x 70cm x 42cm (D x R x C), chế độ bật nằm
+                    1m9x 1m <br />
+                    + Sản phẩm bao gồm: ghế dài và 2 gối ôm đi kèm <br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------- PRODUCT  RELATED ---------------------------->
+    <section class="product-related">
+      <div class="product-related-title">
+        <p>SẢN PHẨM LIÊN QUAN</p>
+      </div>
+      <div class="product-related-content row">
+        <div class="product-related-item" data-id="12">
+          <img src="images/Sofa1.jpg" alt="" />
+          <h1>SOFA TRẮNG ÊM PHÒNG KHÁCH</h1>
+          <p>4.500.000<sup>đ</sup></p>
+        </div>
+
+        <div class="product-related-item" data-id="5">
+          <img src="images/sofa2.jpg" alt="" />
+          <h1>SOFA DA THẬT</h1>
+          <p>9.500.000<sup>đ</sup></p>
+        </div>
+
+        <div class="product-related-item" data-id="6">
+          <img src="images/sofa3.jpg" alt="" />
+          <h1>SOFA ĐỂ GÓC</h1>
+          <p>8.200.000<sup>đ</sup></p>
+        </div>
+
+        <div class="product-related-item" data-id="11">
+          <img src="images/platchair.jpg" alt="" />
+          <h1>GHẾ NHỰA</h1>
+          <p>600.000<sup>đ</sup></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer row">
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">How To Buy</a></li>
+          <li><a href="#">How To Sell</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Return & Refund</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Media Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Payment</h4>
+        <div class="payment-icons">
+          <!-- Add payment icons here, for example: -->
+          <img src="images/visa.jpg" alt="Visa" />
+          <img src="images/MasterCard.jpg" alt="MasterCard" />
+          <img src="images/American Express.jpg" alt="American Express" />
+          <img src="images/Cash on Delivery.jpg" alt="Cash on Delivery" />
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Logistics</h4>
+        <div class="logistics-icons">
+          <!-- Add logistics icons here, for example: -->
+          <img src="images/spx.png" alt="SPX" />
+          <img src="images/viettel.png" alt="Viettel" />
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=i6UV87ftSvPbSV61"
+              >Facebook</a
+            >
+          </li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-------SCRIP--------------->
+    <script src="product-detail-js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+/* Đặt kiểu chữ và màu nền chung cho toàn trang */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Phong cách cho phần "About Us" */
+.about-us {
+  max-width: 800px;
+  margin: 0 auto; /* Căn giữa nội dung */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.about-us h1 {
+  font-size: 2em;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-us p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Tạo hiệu ứng nhẹ khi người dùng di chuột qua văn bản */
+.about-us p:hover {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+/* General Header Styling */
+.header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.logo {
+  cursor: pointer;
+  flex: 1; /* Chia đều không gian cho mỗi phần */
+  margin: 10px;
+  min-width: 200px; /* Đảm bảo chiều rộng tối thiểu cho từng phần */
+  max-width: 250px; /* Đặt chiều rộng tối đa để tránh dàn quá rộng */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+} /* Footer Styling */
+.footer {
+  display: flex;
+  justify-content: space-around; /* Căn đều các phần */
+  padding: 40px;
+  background-color: #f8f8f8;
+  color: #333;
+  flex-wrap: nowrap; /* Không cho các phần tử xuống hàng */
+}
+
+.footer-section {
+  flex: 1; /* Chia đều không gian cho mỗi phần */
+  margin: 10px;
+  min-width: 200px; /* Đảm bảo chiều rộng tối thiểu cho từng phần */
+  max-width: 250px; /* Đặt chiều rộng tối đa để tránh dàn quá rộng */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.payment-icons img,
+.logistics-icons img {
+  width: 50px; /* Giảm kích thước ảnh để vừa với chiều rộng */
+  height: auto;
+}
+
+.footer h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.payment-icons,
+.logistics-icons,
+.download-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}

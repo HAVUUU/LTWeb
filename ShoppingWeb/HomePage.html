@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svma nội thất</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="logo.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-background">
+          <div class="logo" onclick="location.href='HomePage.html'">
+            <img src="images/logonoithat.png" alt="SVMA Logo" />
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons" id="auth-buttons"></div>
+      </div>
+    </header>
+
+    <script>
+      // Kiểm tra trạng thái đăng nhập khi tải trang
+      window.onload = function () {
+        const authButtonsContainer = document.getElementById("auth-buttons");
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        const username = localStorage.getItem("username");
+
+        if (isLoggedIn === "true") {
+          authButtonsContainer.innerHTML = `
+                    <div class="welcome-message">Chào mừng, ${username}!</div>
+                    <button class="logout-button" onclick="logout()">Đăng xuất</button>
+                `;
+        } else {
+          authButtonsContainer.innerHTML = `
+                    <a href="login.html" class="login-button">Đăng nhập</a>
+                    <a href="register.html" class="register-button">Đăng ký</a>
+                `;
+        }
+      };
+
+      function logout() {
+        localStorage.setItem("isLoggedIn", false); // Xóa trạng thái đăng nhập
+        window.location.href = "HomePage.html";
+      }
+    </script>
+
+    <!-- Banner Section -->
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Làm cho nội thất của bạn trở nên tối giản và hiện đại hơn</h1>
+        <p>
+          Biến căn phòng của bạn với SvMa trở nên tối giản và hiện đại hơn rất
+          nhiều một cách dễ dàng và nhanh chóng
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+      <h2>Vì sao nên chọn chúng tôi</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Một cảm giác thượng lưu</h3>
+          <p>Đem lại một cảm giác thanh lịch cho ngôi nhà của bạn.</p>
+          <a href="#">More Info</a>
+        </div>
+        <div class="feature">
+          <h3>Giá Chất lượng</h3>
+          <p>
+            Sản phẩm của chúng tôi sở hữu chất lượng cao với giá cực hạt dẻ.
+          </p>
+          <a href="#">More Info</a>
+        </div>
+        <div class="feature">
+          <h3>Nhiều lựu chọn</h3>
+          <p>Không cần phải lo lắng không tìm được đồ ưng ý của bạn.</p>
+          <a href="#">More Info</a>
+        </div>
+      </div>
+    </section>
+    <!-- Product Categories Section -->
+    <section class="product-categories">
+      <!-- Danh mục sản phẩm -->
+
+      <h2>Danh mục sản phẩm</h2>
+      <!-- Danh mục sản phẩm trên index.html -->
+      <!-- Phần Danh Mục Sản Phẩm trên index.html -->
+      <div class="categories">
+        <a href="products.html?category=sofa" class="category-card">
+          <img src="images/sofa.jpg" alt="Sofa" />
+          <h3>Sofa</h3>
+        </a>
+        <a href="products.html?category=giuong" class="category-card">
+          <img src="images/bed.jpg" alt="Giường" />
+          <h3>Giường</h3>
+        </a>
+        <a href="products.html?category=ban" class="category-card">
+          <img src="images/table.jpg" alt="Bàn" />
+          <h3>Bàn</h3>
+        </a>
+        <a href="products.html?category=ghe" class="category-card">
+          <img src="images/chair.jpg" alt="Ghế" />
+          <h3>Ghế</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer row">
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">How To Buy</a></li>
+          <li><a href="#">How To Sell</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Return & Refund</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Media Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Payment</h4>
+        <div class="payment-icons">
+          <!-- Add payment icons here, for example: -->
+          <img src="images/visa.jpg" alt="Visa" />
+          <img src="images/MasterCard.jpg" alt="MasterCard" />
+          <img src="images/American Express.jpg" alt="American Express" />
+          <img src="images/Cash on Delivery.jpg" alt="Cash on Delivery" />
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Logistics</h4>
+        <div class="logistics-icons">
+          <!-- Add logistics icons here, for example: -->
+          <img src="images/spx.png" alt="SPX" />
+          <img src="images/viettel.png" alt="Viettel" />
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=i6UV87ftSvPbSV61"
+              >Facebook</a
+            >
+          </li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

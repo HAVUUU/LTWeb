@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svma nội thất</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="logo.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-background">
+          <div class="logo" onclick="location.href='HomePage.html'">
+            <img src="images/logonoithat.png" alt="SVMA Logo" />
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons" id="auth-buttons"></div>
+      </div>
+    </header>
+
+    <script>
+      window.onload = function () {
+        const authButtonsContainer = document.getElementById("auth-buttons");
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        const username = localStorage.getItem("username");
+
+        if (isLoggedIn === "true") {
+          authButtonsContainer.innerHTML = `
+                    <div class="welcome-message">Chào mừng, ${username}!</div>
+                    <button class="logout-button" onclick="logout()">Đăng xuất</button>
+                `;
+        } else {
+          authButtonsContainer.innerHTML = `
+                    <a href="login.html" class="login-button">Đăng nhập</a>
+                    <a href="register.html" class="register-button">Đăng ký</a>
+                `;
+        }
+      };
+
+      function logout() {
+        localStorage.setItem("isLoggedIn", false); // Xóa trạng thái đăng nhập
+        window.location.href = "HomePage.html";
+      }
+    </script>
+
+    <!-- Bộ lọc danh mục -->
+    <div class="categories">
+      <button class="category-btn" data-category="all">Tất cả</button>
+      <button class="category-btn" data-category="sofa">Sofa</button>
+      <button class="category-btn" data-category="giuong">Giường</button>
+      <button class="category-btn" data-category="ban">Bàn</button>
+      <button class="category-btn" data-category="ghe">Ghế</button>
+    </div>
+
+    <!-- Danh sách sản phẩm -->
+    <div class="products">
+      <div class="product-card" data-category="sofa" data-id="1">
+        <img src="images/sofa.jpg" alt="Sofa Hiện Đại" />
+        <h3>Sofa Hiện Đại</h3>
+        <p>Giá: 5.990.000₫</p>
+      </div>
+      <div class="product-card" data-category="giuong" data-id="2">
+        <img src="images/bed.jpg" alt="Giường Gỗ Sồi" />
+        <h3>Giường Gỗ Sồi</h3>
+        <p>Giá: 7.500.000₫</p>
+      </div>
+      <div class="product-card" data-category="ban" data-id="3">
+        <img src="images/table2.webp" alt="Bàn Ăn Tròn" />
+        <h3>Bàn Ăn Tròn</h3>
+        <p>Giá: 3.490.000₫</p>
+      </div>
+      <div class="product-card" data-category="ghe" data-id="4">
+        <img src="images/chair.jpg" alt="Ghế Gỗ Tự Nhiên" />
+        <h3>Ghế Gỗ Tự Nhiên</h3>
+        <p>Giá: 1.200.000₫</p>
+      </div>
+      <div class="product-card" data-category="sofa" data-id="5">
+        <img src="images/sofa2.jpg" alt="Sofa da thật" />
+        <h3>Sofa Da Thật</h3>
+        <p>Giá: 9.500.000₫</p>
+      </div>
+      <div class="product-card" data-category="sofa" data-id="6">
+        <img src="images/sofa3.jpg" alt="Sofa góc" />
+        <h3>Sofa Góc</h3>
+        <p>Giá: 8.200.000₫</p>
+      </div>
+      <div class="product-card" data-category="giuong" data-id="7">
+        <img src="images/bed1.jpg" alt="Giường ngủ kim loại" />
+        <h3>Giường Ngủ Kim Loại</h3>
+        <p>Giá: 4.300.000₫</p>
+      </div>
+      <div class="product-card" data-category="giuong" data-id="8">
+        <img src="images/doublebed.jpg" alt="Giường tầng trẻ em" />
+        <h3>Giường Tầng Trẻ Em</h3>
+        <p>Giá: 6.500.000₫</p>
+      </div>
+      <div class="product-card" data-category="ban" data-id="9">
+        <img src="images/table2.webp" alt="Bàn ăn tròn" />
+        <h3>Bàn Ăn Tròn</h3>
+        <p>Giá: 2.800.000₫</p>
+      </div>
+      <div class="product-card" data-category="ban" data-id="10">
+        <img src="images/table3.jpg" alt="Bàn ăn gia đình 6 ghế" />
+        <h3>Bàn Ăn Gia Đình 6 Ghế</h3>
+        <p>Giá: 5.200.000₫</p>
+      </div>
+
+      <div class="product-card" data-category="ghe" data-id="11">
+        <img src="images/platchair.jpg" alt="Ghế nhựa" />
+        <h3>Ghế Nhựa</h3>
+        <p>Giá: 600.000₫</p>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".product-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const productId = card.getAttribute("data-id");
+          window.location.href = `product-detail.html?id=${productId}`;
+        });
+      });
+
+      // Lấy tham số `category` từ URL để lọc sản phẩm tự động
+      const urlParams = new URLSearchParams(window.location.search);
+      const category = urlParams.get("category");
+
+      // Hiển thị các sản phẩm theo danh mục từ URL
+      if (category) {
+        filterProducts(category);
+      }
+
+      // Lọc sản phẩm khi người dùng nhấp vào các nút danh mục
+      const categoryButtons = document.querySelectorAll(".category-btn");
+      categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const selectedCategory = button.getAttribute("data-category");
+          filterProducts(selectedCategory);
+        });
+      });
+
+      // Hàm lọc sản phẩm theo danh mục
+      function filterProducts(selectedCategory) {
+        const products = document.querySelectorAll(".product-card");
+        products.forEach((product) => {
+          const productCategory = product.getAttribute("data-category");
+          if (
+            selectedCategory === "all" ||
+            productCategory === selectedCategory
+          ) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      }
+    </script>
+    <!-- Footer Section -->
+    <footer class="footer row">
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">How To Buy</a></li>
+          <li><a href="#">How To Sell</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Return & Refund</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Media Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Payment</h4>
+        <div class="payment-icons">
+          <!-- Add payment icons here, for example: -->
+          <img src="images/visa.jpg" alt="Visa" />
+          <img src="images/MasterCard.jpg" alt="MasterCard" />
+          <img src="images/American Express.jpg" alt="American Express" />
+          <img src="images/Cash on Delivery.jpg" alt="Cash on Delivery" />
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Logistics</h4>
+        <div class="logistics-icons">
+          <!-- Add logistics icons here, for example: -->
+          <img src="images/spx.png" alt="SPX" />
+          <img src="images/viettel.png" alt="Viettel" />
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=i6UV87ftSvPbSV61"
+              >Facebook</a
+            >
+          </li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
